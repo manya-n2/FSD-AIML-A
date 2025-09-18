@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE</title>
+
+</head>
+<body>
+    <!--table>thead>tr>th*10{$}^^tbody>tr*5>td*10{FSD}
+    Step-by-step explanation of each word/symbol:
+
+table
+→ Creates a <table> element.
+This is the parent element that will contain everything.
+
+>
+→ Means "child element".
+So table>thead means <thead> is a child of <table>.
+
+thead
+→ Creates a <thead> element (table header section).
+
+tr
+→ Creates a <tr> (table row).
+Here, it’s a child of <thead>.
+
+th*10
+→ Creates 10 <th> elements (table header cells) inside that <tr>.
+
+{$}
+→ Inserts a counter (1,2,3...) as the content of each generated element.
+So the <th> elements will contain 1, 2, 3, …, 10.
+
+Example:
+
+<th>1</th><th>2</th> … <th>10</th>
+
+
+^^
+→ Go two levels up in the hierarchy.
+Since we are inside <th> → <tr> → <thead>,
+^^ takes us back up to <table>.
+
+tbody
+→ Creates a <tbody> element (table body section).
+This will be another child of <table>.
+
+tr*5
+→ Creates 5 table rows inside <tbody>.
+
+td*10
+→ Inside each row, create 10 table cells (<td>).
+
+{FSD}
+→ Inserts the text "FSD" as the content inside each <td>.-->
+    <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    thead {
+      background-color: #f0f0f0;
+    }
+    caption {
+      font-weight: bold;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>5th sem CSE-AIML Section A Class Time Table</caption>
+    <thead>
+      <tr>
+        <th>DAY</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th> </th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MON</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td rowspan="5">LUNCH</td> <!-- lunch spans all days -->
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+      </tr>
+      <tr>
+        <td>TUE</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <!-- lunch already spanned -->
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+      </tr>
+      <tr>
+        <td>WED</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <!-- lunch already spanned -->
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+      </tr>
+      <tr>
+        <td>THU</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <!-- lunch already spanned -->
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+      </tr>
+      <tr>
+        <td>FRI</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <!-- lunch already spanned -->
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+        <td>FSD</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

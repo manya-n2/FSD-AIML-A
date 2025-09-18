@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sync vs Async</title>
+</head>
+<body>
+  <h1>Sync & Async Login Flow</h1>
+  <button onclick="runSyncFlow()">Run Synchronous Flow</button>
+  <button onclick="runAsyncFlow()">Run Asynchronous Flow</button>
+  <script src="testjssync.js"></script>
+  <script src="testjsasync.js"></script>
+  
+</body>
+</html>
+<!--USING CALLBACK-->
+<!-- function login(cb) {
+  console.log("Login started");
+  setTimeout(() => {
+    console.log("Login end");
+    cb();
+  }, 2000);
+}
+
+function getData(cb) {
+  console.log("Get Data started");
+  setTimeout(() => {
+    console.log("Get Data end");
+    cb();
+  }, 8000);
+}
+
+function calculateData(cb) {
+  console.log("Calculate Data started");
+  setTimeout(() => {
+    console.log("Calculate Data end");
+    cb();
+  }, 3000);
+}
+
+function sendSMS(cb) {
+  console.log("Send SMS started");
+  setTimeout(() => {
+    console.log("Send SMS end");
+    cb();
+  }, 1000);
+}
+
+function logout(cb) {
+  console.log("Logout started");
+  setTimeout(() => {
+    console.log("Logout end");
+    cb();
+  }, 1000);
+}
+
+function runCallbackFlow() {
+  login(() => {
+    getData(() => {
+      calculateData(() => {
+        sendSMS(() => {
+          logout(() => {
+            console.log("Callback flow completed");
+          });
+        });
+      });
+    });
+  });
+} -->
+<!--USING PROMISE-->
+<!-- function login() {
+  console.log("Login started");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Login end");
+      resolve();
+    }, 2000);
+  });
+}
+
+function getData() {
+  console.log("Get Data started");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Get Data end");
+      resolve();
+    }, 8000);
+  });
+}
+
+function calculateData() {
+  console.log("Calculate Data started");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Calculate Data end");
+      resolve();
+    }, 3000);
+  });
+}
+
+function sendSMS() {
+  console.log("Send SMS started");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Send SMS end");
+      resolve();
+    }, 1000);
+  });
+}
+
+function logout() {
+  console.log("Logout started");
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Logout end");
+      resolve();
+    }, 1000);
+  });
+}
+
+function runPromiseFlow() {
+  login()
+    .then(getData)
+    .then(calculateData)
+    .then(sendSMS)
+    .then(logout)
+    .then(() => {
+      console.log("Promise flow completed");
+    });
+} -->

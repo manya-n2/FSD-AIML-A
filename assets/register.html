@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register here</title>
+</head>
+<body>
+    <h1>register here</h1>
+    <form name="register" method="post" action="register.js"><!--post makes the query string invisible-->
+   <label for="name"></label>Name<input type="text" name="uname1" placeholder="Enter username" required><br/>
+   <label for="email"></label>Email<input type="email" name="email" placeholder="Enter email" required><br/>
+   <label for="dob"></label>Date of Birth<input type="date" name="dob" id=""><br/>
+   <label for="name"></label>Gender<input type="radio" name="gender" value="M"/>Male
+   <input type="radio" name="gender" value="F"/>Female
+    </br>
+    <label for="address">Address:</label>
+<input type="text" name="uaddress" id="address"><br>
+
+<label for="branch">Branch:</label>
+<select name="ubranch" id="branch">
+  <option value="">-- Select Branch --</option>
+  <option value="CSE">CSE</option>
+  <option value="AIML">AIML</option>
+  <option value="IT">IT</option>
+  <option value="ECE">ECE</option>
+  <option value="EEE">EEE</option>
+  <option value="ME">ME</option>
+</select><br>
+<input type="submit" value="Register Here"/><!--uname1=&email=&dob=&uaddress=&ubranch=(this is a query string , default get)-->
+<input type="reset" value="reset"/>
+   
+
+
+    </form>
+</body>
+</html>
